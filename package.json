@@ -1,0 +1,19 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "The simple Todo List with pure javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PouRiaBG/SimpleToDoList.git"
+  },
+  "author": "PouRiaBG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PouRiaBG/SimpleToDoList/issues"
+  },
+  "homepage": "https://github.com/PouRiaBG/SimpleToDoList#readme"
+}
