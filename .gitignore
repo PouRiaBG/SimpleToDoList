@@ -1,0 +1,4 @@
+#This file is igonre node_modules/ directory
+
+node_modules/
+.DS_Store
