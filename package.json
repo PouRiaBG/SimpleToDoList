@@ -4,7 +4,7 @@
   "description": "The simple Todo List with pure javascript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build" : "babel src/index.js -o public/scripts/bundle.js --presets env"
   },
   "repository": {
     "type": "git",
