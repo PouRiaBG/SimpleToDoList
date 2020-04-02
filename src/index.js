@@ -1,4 +1,5 @@
 //Add Today Date in the header
+
 function loading(){
     let date = new Date().toDateString()
 

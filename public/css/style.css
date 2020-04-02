@@ -10,6 +10,7 @@ body{
     width: 30vw;
     height: 80vh;
     border-radius: 1.8rem;
+    box-shadow: 5px 5px 20px 0px;
 }
 #header-date{
     width: 100%;
@@ -21,4 +22,12 @@ body{
     font-size: 1.5rem;
     font-family: Roboto-light;
     color: #ff8275
+}
+#main nav {
+    font-family: Roboto;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
 }
