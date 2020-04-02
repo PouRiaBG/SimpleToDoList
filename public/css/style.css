@@ -1,3 +1,24 @@
 body{
    background-image: url(../Assets/images/Limeade.png);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+#main {
+    background-color: white;
+    width: 30vw;
+    height: 80vh;
+    border-radius: 1.8rem;
+}
+#header-date{
+    width: 100%;
+    height:15%;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: Roboto-light;
+    color: #ff8275
 }

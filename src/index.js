@@ -1,15 +1,10 @@
-var p = document.getElementsByTagName("p")[0];
+//Add Today Date in the header
+function loading(){
+    let date = new Date().toDateString()
 
-p.addEventListener("click",color);
+    let textDate = document.createTextNode(date)
 
-console.log(p)
+    let element = document.getElementById("header-date");
 
-function color(){
-    p.style.color = "red"
+    element.appendChild(textDate)
 }
-
-
-
-
-
-

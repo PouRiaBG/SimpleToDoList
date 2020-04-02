@@ -1,11 +1,13 @@
 "use strict";
 
-var p = document.getElementsByTagName("p")[0];
+document.getElementsByTagName("body")[0].addEventListener("load", loading);
 
-p.addEventListener("click", color);
+function loading() {
+    var date = new Date().toDateString();
 
-console.log(p);
+    var textDate = document.createTextNode(date);
 
-function color() {
-    p.style.color = "red";
+    var element = document.getElementById("header-date");
+
+    element.appendChild(textDate);
 }
