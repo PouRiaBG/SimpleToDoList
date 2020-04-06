@@ -10,7 +10,8 @@ body{
     width: 30vw;
     height: 80vh;
     border-radius: 1.8rem;
-    box-shadow: 5px 5px 20px 0px;
+    box-shadow: 3px 3px 20px 0px;
+    position: relative;
 }
 #header-date{
     width: 100%;
@@ -30,4 +31,54 @@ body{
     justify-content: center;
     align-items: center;
     height: 10%;
+}
+#list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+#list ol{
+    list-style-type: upper-latin;
+}
+#list ol li{
+    font-size:1.1rem;
+    font-family: Roboto-light;
+    padding: 1rem 5rem;
+}
+#list ol li i{
+    padding: 0px 0px 0px 1rem;
+    font-size: 1.2rem;
+    color:red;
+    cursor: pointer;
+}
+#add {
+    position: absolute;
+    border-radius: 3rem;
+    left: 0;
+    right: 0;
+    width: 5rem;
+    bottom: -15px;
+    height: 5rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ff5b5b;
+}
+#add i {
+    font-size: 2.5rem;
+    color:white
+}
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+footer input[type="text"] {
+    border: none;
+    text-align: center;
+    border-bottom:1px solid #e4e4e4;
+    padding: 10px;
+    font-family: Roboto;
 }
