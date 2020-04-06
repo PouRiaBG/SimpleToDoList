@@ -23,21 +23,26 @@ function value(){
         addTask(task);
     }
 }
-
+var count = 0
 function addTask(inputElement){
-    const parentList = document.getElementById("list").childNodes[1];
-    const trashIcon = document.createElement("i");
-    const removeAttr = document.createAttribute("onclick");
-    removeAttr.value = "this.parentNode.remove()"
-    trashIcon.setAttributeNode(removeAttr)
-    trashIcon.setAttribute("class","far fa-trash-alt")
-    //remove element 
-    
-    const li = document.createElement("li")
-    var task = document.createTextNode(inputElement.value)
-    li.appendChild(task)
-    li.appendChild(trashIcon)
-    parentList.appendChild(li)
-    inputElement.value = ""
+   if (count < 8){
+        const parentList = document.getElementById("list").childNodes[1];
+        const trashIcon = document.createElement("i");
+        trashIcon.setAttribute("class","far fa-trash-alt")
+        trashIcon.onclick = function(){
+            count --
+            this.parentNode.remove()
+            
+        }
+        const li = document.createElement("li")
+        var task = document.createTextNode(inputElement.value)
+        li.appendChild(task)
+        li.appendChild(trashIcon)
+        parentList.appendChild(li)
+        inputElement.value = ""
+        count ++
+   }else{
+       alert("to much tasks")
+   }
     
 }

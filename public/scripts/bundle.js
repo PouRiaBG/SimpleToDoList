@@ -24,20 +24,24 @@ function value() {
         addTask(task);
     }
 }
-
+var count = 0;
 function addTask(inputElement) {
-    var parentList = document.getElementById("list").childNodes[1];
-    var trashIcon = document.createElement("i");
-    var removeAttr = document.createAttribute("onclick");
-    removeAttr.value = "this.parentNode.remove()";
-    trashIcon.setAttributeNode(removeAttr);
-    trashIcon.setAttribute("class", "far fa-trash-alt");
-    //remove element 
-
-    var li = document.createElement("li");
-    var task = document.createTextNode(inputElement.value);
-    li.appendChild(task);
-    li.appendChild(trashIcon);
-    parentList.appendChild(li);
-    inputElement.value = "";
+    if (count < 5) {
+        var parentList = document.getElementById("list").childNodes[1];
+        var trashIcon = document.createElement("i");
+        trashIcon.setAttribute("class", "far fa-trash-alt");
+        trashIcon.onclick = function () {
+            count--;
+            this.parentNode.remove();
+        };
+        var li = document.createElement("li");
+        var task = document.createTextNode(inputElement.value);
+        li.appendChild(task);
+        li.appendChild(trashIcon);
+        parentList.appendChild(li);
+        inputElement.value = "";
+        count++;
+    } else {
+        alert("to much tasks");
+    }
 }
