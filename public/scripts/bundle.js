@@ -26,7 +26,7 @@ function value() {
 }
 var count = 0;
 function addTask(inputElement) {
-    if (count < 5) {
+    if (count < 8) {
         var parentList = document.getElementById("list").childNodes[1];
         var trashIcon = document.createElement("i");
         trashIcon.setAttribute("class", "far fa-trash-alt");
@@ -35,6 +35,9 @@ function addTask(inputElement) {
             this.parentNode.remove();
         };
         var li = document.createElement("li");
+        li.onclick = function () {
+            this.style.textDecoration = "line-through";
+        };
         var task = document.createTextNode(inputElement.value);
         li.appendChild(task);
         li.appendChild(trashIcon);
@@ -45,3 +48,5 @@ function addTask(inputElement) {
         alert("to much tasks");
     }
 }
+
+function lineTh() {}

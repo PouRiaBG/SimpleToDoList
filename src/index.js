@@ -35,6 +35,9 @@ function addTask(inputElement){
             
         }
         const li = document.createElement("li")
+        li.onclick = function(){
+            this.style.textDecoration = "line-through"
+        }
         var task = document.createTextNode(inputElement.value)
         li.appendChild(task)
         li.appendChild(trashIcon)
