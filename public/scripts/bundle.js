@@ -1,8 +1,8 @@
 "use strict";
 
-//Add Today Date in the header
+//Add Today Date in the header, start when the page is loaded
 
-function loading() {
+var loading = function loading() {
     var date = new Date().toDateString();
 
     var textDate = document.createTextNode(date);
@@ -10,22 +10,23 @@ function loading() {
     var element = document.getElementById("header-date");
 
     element.appendChild(textDate);
-}
+};
 
 var addElement = document.getElementById("add");
 
 addElement.addEventListener("click", value);
 
-function value() {
+var value = function value() {
     var task = document.getElementsByTagName("input")[0];
     if (task.value.length === 0) {
         alert("Dude!! this is empty");
     } else {
         addTask(task);
     }
-}
+};
+
 var count = 0;
-function addTask(inputElement) {
+var addTask = function addTask(inputElement) {
     if (count < 8) {
         var parentList = document.getElementById("list").childNodes[1];
         var trashIcon = document.createElement("i");
@@ -47,6 +48,4 @@ function addTask(inputElement) {
     } else {
         alert("to much tasks");
     }
-}
-
-function lineTh() {}
+};

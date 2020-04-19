@@ -1,6 +1,6 @@
-//Add Today Date in the header
+//Add Today Date in the header, start when the page is loaded
 
-function loading(){
+let loading = () => {
     let date = new Date().toDateString()
 
     let textDate = document.createTextNode(date)
@@ -15,7 +15,7 @@ let addElement = document.getElementById("add");
 addElement.addEventListener("click",value);
 
 
-function value(){
+let value = () => {
     const task = document.getElementsByTagName("input")[0];
     if(task.value.length === 0){
         alert("Dude!! this is empty")
@@ -23,8 +23,9 @@ function value(){
         addTask(task);
     }
 }
+
 var count = 0
-function addTask(inputElement){
+let addTask = (inputElement) =>{
    if (count < 8){
         const parentList = document.getElementById("list").childNodes[1];
         const trashIcon = document.createElement("i");
@@ -38,7 +39,7 @@ function addTask(inputElement){
         li.onclick = function(){
             this.style.textDecoration = "line-through"
         }
-        var task = document.createTextNode(inputElement.value)
+        let task = document.createTextNode(inputElement.value)
         li.appendChild(task)
         li.appendChild(trashIcon)
         parentList.appendChild(li)
